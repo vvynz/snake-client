@@ -22,18 +22,18 @@ const handleUserInput = function () {
       connection.write("Move: up");
     }
 
-    // // "a"
-    // if (data === "\u0061") {
-    //   conn.write("Move: left");
-    // }
+    // "a"
+    if (data === "\u0061") {
+      connection.write("Move: left");
+    }
 
     // // "s"
     // if (data === "\u0073") {
-    //   conn.write("Move: down");
+    //   connection.write("Move: down");
     // }
     // // "d"
     // if (data === "\u0064") {
-    //   conn.write("Move: right");
+    //   connection.write("Move: right");
     // }
   });
 };
