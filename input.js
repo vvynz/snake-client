@@ -17,23 +17,28 @@ const handleUserInput = function () {
     if (data === "\u0003") {
       process.exit();
     }
-    // "w"
+    // "w" keypress
     if (data === "\u0077") {
       connection.write("Move: up");
     }
 
-    // "a"
+    // "a" keypress
     if (data === "\u0061") {
       connection.write("Move: left");
     }
 
-    // "s"
+    // "s" keypress
     if (data === "\u0073") {
       connection.write("Move: down");
     }
-    // "d"
+    // "d" keypress
     if (data === "\u0064") {
       connection.write("Move: right");
+    }
+
+    // "m" keypress
+    if (data === "m") {
+      connection.write("spoon");
     }
   });
 };
