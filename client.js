@@ -15,13 +15,20 @@ const connect = function () {
     console.log("successfully connected to game server!");
     conn.write(`Name: VVZ`);
 
-    setInterval(() => {
-      // conn.write("Move: up");
-    }, 500);
+    const setSeconds = (interval, direction) => {
+      setInterval(() => {
+        conn.write(`Move: ${direction}`);
+      }, interval * 100);
+    };
 
     setInterval(() => {
+      // conn.write("Move: up");
+    }, 100);
+
+    // setSeconds(1, "down");
+    setInterval(() => {
       conn.write("Move: down");
-    }, 300);
+    }, 100);
 
     setInterval(() => {
       conn.write("Move: left");
@@ -33,7 +40,7 @@ const connect = function () {
 
     setInterval(() => {
       conn.write("Move: up");
-    }, 500);
+    }, 100);
   });
   // interpret incoming data as text
   conn.setEncoding("utf8");
