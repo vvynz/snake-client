@@ -27,14 +27,14 @@ const handleUserInput = function () {
       connection.write("Move: left");
     }
 
-    // // "s"
-    // if (data === "\u0073") {
-    //   connection.write("Move: down");
-    // }
-    // // "d"
-    // if (data === "\u0064") {
-    //   connection.write("Move: right");
-    // }
+    // "s"
+    if (data === "\u0073") {
+      connection.write("Move: down");
+    }
+    // "d"
+    if (data === "\u0064") {
+      connection.write("Move: right");
+    }
   });
 };
 
